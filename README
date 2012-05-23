@@ -1,0 +1,13 @@
+joomla - virtuemart
+
+
+
+Install tips
+
+1) install the authentication plugin 
+
+2) install the component
+
+3) install the module
+
+set the client id, client secret and redirect uri to component.

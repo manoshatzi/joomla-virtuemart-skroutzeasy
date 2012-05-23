@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5">
+	<!-- Name of the Component -->
+	<name>Skroutz Easy</name>
+
+	<!-- Name of the Author -->
+	<author>Skroutz.gr</author>
+
+	<!-- Author's email address -->
+	<authorEmail>dev@skroutz.gr</authorEmail>
+
+	<!-- Author's website -->
+	<authorUrl>http://www.skroutz.gr</authorUrl>
+
+	<!-- Description of what the component does -->
+	<description>Faster checkouts with Skroutz Easy</description>
+
+	<!-- Component version number, recorded in the components table -->
+	<version>1.0.0</version>
+
+	<!-- Version Date of the Module -->
+	<!-- Original creation date. Recommended: YYYY-MM-DD -->
+	<creationDate>April 2012</creationDate>
+
+	<!-- Copyright information -->
+	<copyright>Copyright (c) 2012 Skroutz.gr. All rights reserved.</copyright>
+
+	<!-- License information -->
+	<license>MIT - http://www.opensource.org/licenses/MIT</license>
+
+	<!-- Custom install Script to execute - Joomla 1.5 -->
+	<!-- Note: This will be copied from the root of the installation package to the administrator directory automatically -->
+	<!--<installfile>install/install.skroutzeasy.php</installfile>-->
+
+	<!-- Custom uninstall Script to execute - Joomla 1.5 -->
+	<!-- Note: This will be copied from the root of the installation package to the administrator directory automatically -->
+	<!--<uninstallfile>install/uninstall.skroutzeasy.php</uninstallfile>-->
+
+	<!-- Custom un/installer for - Joomla 1.6+ -->
+	<!--<scriptfile>install/script.virtuemart.php</scriptfile>-->
+
+	<!-- Runs on update - Joomla 1.6+ -->
+	<!--
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	-->
+	
+	<install>
+		<sql>
+			<file charset="utf8" driver="mysql">install.sql</file>
+		</sql>
+	</install>
+
+	<uninstall>
+		<sql>
+			<file charset="utf8" driver="mysql">uninstall.sql</file>
+		</sql>
+	</uninstall>
+	
+	<!-- Listing of all files that should be installed for the component to function -->
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>skroutzeasy.php</filename>
+		<filename>index.html</filename>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu>Skroutz Easy</menu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>skroutzeasy.php</filename>
+			<folder>controllers</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+</install>

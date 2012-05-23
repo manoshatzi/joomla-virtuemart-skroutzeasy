@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<!-- Name of the Module -->
+	<name>Skroutz Easy</name>
+
+	<!-- Name of the Author -->
+	<author>Skroutz.gr</author>
+
+	<!-- Version Date of the Module -->
+	<creationDate>April 2012</creationDate>
+
+	<!-- Copyright information -->
+	<copyright>Copyright (c) 2012 Skroutz.gr. All rights reserved.</copyright>
+
+	<!-- License Information -->
+	<license>MIT - http://www.opensource.org/licenses/MIT</license>
+
+	<!-- Author's email address -->
+	<authorEmail>dev@skroutz.gr</authorEmail>
+
+	<!-- Author's website -->
+	<authorUrl>www.skroutz.gr</authorUrl>
+
+	<!-- Module version number -->
+	<version>1.0.0</version>
+
+	<!-- Description of what the module does -->
+	<description>DESCSKROUTZFORM</description>
+
+	<!-- Listing of all files that should be installed for the module to function -->
+	<files>
+		<!-- The "module" attribute signifies that this is the main controller file -->
+		<filename module="mod_skroutz">mod_skroutz.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_skroutz.ini</language>
+		<language tag="el-GR">el-GR/el-GR.mod_skroutz.ini</language>
+	</languages>
+
+	<params>
+		<param name="pretext" type="textarea" cols="30" rows="5" default="MOD_SKROUTZ_EASY_PRETEXT" label="Pre-text" description="PARAMPRETEXT" />
+		<param name="posttext" type="textarea" cols="30" rows="5" default="MOD_SKROUTZ_EASY_POSTTEXT" label="Post-text" description="PARAMPOSTTEXT" />
+		<param name="login" type="menuitem" default="" disable="separator" label="Login Redirection URL" description="PARAMLOGINREDIRECTURL" state="1" />
+		<param name="logout" type="menuitem" default="" disable="separator" label="Logout Redirection URL" description="PARAMLOGOUTREDIRECTURL" state="1" />
+		<param name="greeting" type="radio" default="1" label="Greeting" description="Show/Hide the simple greeting text">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="name" type="list" default="0" label="Name/Username">
+			<option value="0">Username</option>
+			<option value="1">Name</option>
+		</param>
+		<param name="usesecure" type="radio" default="0" label="Encrypt Login Form" description="Submit encrypted login data (requires SSL)">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+	</params>
+</install>
